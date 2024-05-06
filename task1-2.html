@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script class="bai1">
+      function alertMessage() {
+        alert("Xin chào");
+      }
+
+      alertMessage();
+    </script>
+    <script class="bai2">
+      function tang1(a) {
+        return a + 1;
+      }
+
+      // Gọi hàm và hiển thị kết quả
+      let inputNumber = 5;
+      let result = tang1(inputNumber);
+      console.log("Kết quả: " + result);
+    </script>
+    <script class="bai3">
+      function compare(x, y) {
+        if (x > y) {
+          alert("Tham số thứ nhất lớn hơn tham số thứ hai!");
+        } else {
+          return x + y;
+        }
+      }
+
+      // Ví dụ sử dụng hàm
+      let result1 = compare(10, 5); // Tham số thứ nhất lớn hơn tham số thứ hai
+      console.log("Kết quả 1:", result1); // Hiển thị thông báo
+
+      let result2 = compare(3, 8); // Tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai
+      console.log("Kết quả 2:", result2); // Hiển thị tổng của hai tham số
+    </script>
+    <script class="bai4">
+      function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+      }
+
+      // Hiển thị hộp thoại cảnh báo trước khi gọi hàm addNumbers()
+      alert("Trước khi gọi hàm addNumbers(): result = " + result);
+
+      result = 0;
+      result = addNumbers();
+
+      // Hiển thị hộp thoại cảnh báo sau khi gọi hàm addNumbers()
+      alert("Sau khi gọi hàm addNumbers(): result = " + result);
+    </script>
+    <script class="bai5">
+      // Tạo mảng tên ngôi sao
+      const stars = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      // Tạo mảng tên chòm sao tương ứng
+      const constellations = [
+        "Ursa Minor",
+        "Taurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+
+      // Hàm tìm tên chòm sao
+      function findConstellation(starName) {
+        const index = stars.indexOf(starName);
+        if (index !== -1) {
+          return constellations[index];
+        } else {
+          return "Không tìm thấy ngôi sao nào!";
+        }
+      }
+
+      // Nhập tên ngôi sao từ người dùng
+      const userInput = prompt("Nhập tên ngôi sao:");
+      const resul = findConstellation(userInput);
+
+      // Hiển thị kết quả
+      alert(resul);
+    </script>
+  </body>
+</html>
